@@ -36,7 +36,7 @@ export class EventEntity {
   updatedAt: string;
 
   @DeleteDateColumn({ name: 'deleted_at' })
-  deletedAt: string;
+  deletedAt: string | null;
 
   @ManyToOne(() => UserEntity, (user) => user.events, {
     onDelete: 'CASCADE',

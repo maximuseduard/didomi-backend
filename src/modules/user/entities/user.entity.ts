@@ -24,7 +24,7 @@ export class UserEntity {
   updatedAt: string;
 
   @DeleteDateColumn({ name: 'deleted_at' })
-  deletedAt: string;
+  deletedAt: string | null;
 
   @OneToMany(() => EventEntity, (event) => event.user, {
     cascade: true,
